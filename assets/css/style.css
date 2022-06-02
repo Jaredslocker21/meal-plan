@@ -68,4 +68,51 @@ p {
     border-left: 1px solid;
 }
 
+input[type="text"], 
+.input-field {
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 2px 5px #888888;
+
+}
+
+input[type="number"],
+.input-field {
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 2px 5px #888888;
+
+}
+
+#calcbtn {
+    padding: 2%;
+    margin: 3%
+}
+
 /*Memo App*/
+
+/*Media Queries*/
+
+@media screen and (max-width: 800px){
+    .mpcontainer{
+        max-width: 100%;
+        margin: 2%;
+    }
+    
+}
+
+@media screen and (max-width:800px) {
+    .sidecalc {
+        border-left: none;
+        text-align: center;
+        bottom: 0;
+        left: 10px;
+        position: relative;
+        width: auto;
+}
+    
+}
