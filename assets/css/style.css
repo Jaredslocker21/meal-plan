@@ -42,3 +42,9 @@ h1 {
     text-align: center;
     padding: 5%;
 }
+
+h2 {
+    color: rgb(81, 199, 238);
+    font-family: "Roboto Mono" sans-serif;
+    text-align: center;
+}
