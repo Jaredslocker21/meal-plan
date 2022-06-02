@@ -15,7 +15,7 @@ body {
     background-color: #fff9f9;
 }
 
-#mpcontainer {
+.mpcontainer {
     max-width: 70%;
 }
 
@@ -47,4 +47,16 @@ h2 {
     color: rgb(81, 199, 238);
     font-family: "Roboto Mono" sans-serif;
     text-align: center;
+}
+ /*Aside with the BMI calculator*/
+.sidecalc {
+    height: 100%;
+    width: 20%;
+    padding: 3%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    border-left: 1px solid;
 }
