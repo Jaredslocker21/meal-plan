@@ -15,10 +15,7 @@ body {
     background-color: #fff9f9;
 }
 
-.mpcontainer {
-    max-width: 70%;
-}
-
+/*Header*/
 #nav{
     font-size: 1.5rem;
     letter-spacing: 4px;
@@ -35,6 +32,10 @@ a{
     text-decoration: none;
     color: black;
 }
+/*Body*/
+.mpcontainer {
+    max-width: 70%;
+}
 
 h1 {
     color: rgb(40, 126, 155);
@@ -48,6 +49,12 @@ h2 {
     font-family: "Roboto Mono" sans-serif;
     text-align: center;
 }
+
+p {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    padding: 2%;
+}
  /*Aside with the BMI calculator*/
 .sidecalc {
     height: 100%;
@@ -60,3 +67,5 @@ h2 {
     overflow-x: hidden;
     border-left: 1px solid;
 }
+
+/*Memo App*/
