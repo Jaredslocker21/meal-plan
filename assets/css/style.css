@@ -35,3 +35,10 @@ a{
     text-decoration: none;
     color: black;
 }
+
+h1 {
+    color: rgb(40, 126, 155);
+    font-family: "Roboto Mono", sans-serif;
+    text-align: center;
+    padding: 5%;
+}
