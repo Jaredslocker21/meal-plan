@@ -68,6 +68,15 @@ p {
     border-left: 1px solid;
 }
 
+.bmi-info {
+    font-family: "Roboto Mono";
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.0rem;
+    margin: 25% 0 0 0 ;
+
+}
+
 input[type="text"], 
 .input-field {
     margin: 8px 0;
