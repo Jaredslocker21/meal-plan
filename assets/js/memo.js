@@ -54,3 +54,7 @@ function addMemo() {
 
     currentMemo.push(memoObject);
 }
+
+
+//Event listener Clicl for new memo
+addMemoButton.addEventListener("click", () => addMemo());
