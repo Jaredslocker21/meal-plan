@@ -116,6 +116,7 @@ input[type="number"],
     background-color: #FFFF88;
     resize: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 9px;
 }
 
 .create-memo {

@@ -26,19 +26,15 @@ function createMemoElement(id, content) {
     //refering to a text area element and css class Id
     element.classList.add("memo");
     element.value = content;
-    element.placeholder = "Keep Organized";
-    
     element.addEventListener("change", () =>{
         updateMemo(id, element.value);
 
     });
     
     element.addEventListener("dblclick", () =>{
-        let doDelete = confirm("delete Memo: OK or Cancel");
-        if (doDelete){
-            deleteMemo(id, element);
+        let doDelete = deleteMemo(id, element);
         }
-    })
+    )
     return element;
 }
 // Adding a memo and giving it an id
