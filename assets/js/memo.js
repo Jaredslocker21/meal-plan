@@ -43,4 +43,9 @@ function createMemoElement(id, content) {
     return element;
 }
 
-console.log(createMemoElement)
+function addMemo() {
+    let currentMemo = getMemos();
+    let memoObject = {
+        id: ~~ (Math.random() * 1000000),
+    }
+}
