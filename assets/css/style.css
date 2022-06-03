@@ -119,11 +119,21 @@ input[type="number"],
 }
 
 .create-memo {
-    height: 175;
-    transition: 0.3s;
-    background-color: 0, 0, 0, 0.1;
+    height: 175px;
+    transition:  0.3s;
+    background: 0, 0, 0, 0.1;
     cursor: pointer;
     font-size: 2.0rem;
+
+}
+
+#mapplication {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 175px);
+    padding: 30px;
+    gap: 30px;
+    margin: auto;
+
 
 }
 
@@ -133,6 +143,7 @@ input[type="number"],
     .mpcontainer{
         max-width: 100%;
         margin: 2%;
+       
     }
     
 }
