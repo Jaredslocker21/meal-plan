@@ -42,10 +42,15 @@ function createMemoElement(id, content) {
     })
     return element;
 }
-
+// Adding a memo and giving it an id
 function addMemo() {
     let currentMemo = getMemos();
     let memoObject = {
         id: ~~ (Math.random() * 1000000),
-    }
+    };
+
+    let memoElement = createMemoElement(memoObject.id, memoObject.content)
+    memosContainer.insertBefore(memoElement, addMemoButton);
+
+    currentMemo.push(memoObject);
 }
