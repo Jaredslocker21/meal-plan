@@ -106,6 +106,18 @@ input[type="number"],
 
 /*Memo App*/
 
+.memo {
+    font-size: 15px;
+    height: 175;
+    font-family: "Roboto-Mono", sans-serif;
+    border: none;
+    border-radius: 13px;
+    box-sizing: border-box;
+    background-color: #FFFF88;
+    resize: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 800px){
