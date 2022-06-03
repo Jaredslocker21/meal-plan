@@ -5,8 +5,8 @@
 //https://www.w3schools.com/jsref/met_storage_getitem.asp
 //https://www.youtube.com/watch?v=AWcZcJaIntQ
 
-const memosContainer = document.getElementById("mapplication")
-const addMemoButton = memosContainer.querySelector(".create-memo")
+const memosContainer = document.getElementById("mapplication");
+const addMemoButton = memosContainer.querySelector(".create-memo");
 
 /**JSON.stringify()
  * A common use of JSON is to exchange data to/from a web server. When sending data to a web server, the data has to be a string.
@@ -14,18 +14,18 @@ const addMemoButton = memosContainer.querySelector(".create-memo")
  */
 
 function saveMemos(memos) {
-    localStorage.setItem("remember-memos", JSON.stringify(memos))
+    localStorage.setItem("remember-memos", JSON.stringify(memos));
 }
 //The getItem() method of the storage interface,when passed a key name, will return the key's value
 function getMemos(memos) {
-    return JSON.parse(localStorage.getItem("remember-memos"))
+    return JSON.parse(localStorage.getItem("remember-memos") || ("[]"));
 }
 
 //Create a new memo
 function createMemoElement(id, content) {
-    const element = document.createElement("textarea")
+    const element = document.createElement("textarea");
     //refering to a text area element and css class Id
-    element.classList.add("memo")
+    element.classList.add("memo");
     element.value = content;
     element.placeholder = "Keep Organized";
     
@@ -55,6 +55,31 @@ function addMemo() {
     currentMemo.push(memoObject);
 }
 
+function updateMemo(id, newContent)  {
+    let memos = getMemos();
+    let targetMemo = memos.filter(memo => memo.id === id)[0];
+    if (targetMemo) {
+        targetMemo.content = newContent;
+    } else {
+        targetMemo = {
+            id, content: newContent,
+        }
+    }
+    saveMemos([...memos, targetMemo])
+}
+function deleteMemo (id, element) {
+    let memos = getMemos().filter(memo => memo.id ! =id );
+
+    saveMemos(memos)
+    memosContainer.removeChild(element);
+
+}
 
 //Event listener Clicl for new memo
 addMemoButton.addEventListener("click", () => addMemo());
+
+getMemos().forEach((memo) => {
+    let memoElement = createMemoElement(memo.id, memo.content);
+    memosContainer = createMemoElement(memoElement, addMemoButton)
+    
+});
