@@ -108,7 +108,7 @@ input[type="number"],
 
 .memo {
     font-size: 15px;
-    height: 175;
+    height: 175PX;
     font-family: "Roboto-Mono", sans-serif;
     border: none;
     border-radius: 13px;

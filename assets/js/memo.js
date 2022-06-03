@@ -12,7 +12,6 @@ const addMemoButton = memosContainer.querySelector(".create-memo");
  * A common use of JSON is to exchange data to/from a web server. When sending data to a web server, the data has to be a string.
  * he setItem() method sets the value of the specified Storage Object item. The setItem() method belongs to the Storage Object
  */
-
 function saveMemos(memos) {
     localStorage.setItem("remember-memos", JSON.stringify(memos));
 }
@@ -54,7 +53,7 @@ function addMemo() {
 
     currentMemo.push(memoObject);
 }
-
+// update a memo
 function updateMemo(id, newContent)  {
     let memos = getMemos();
     let targetMemo = memos.filter(memo => memo.id === id)[0];
@@ -67,8 +66,9 @@ function updateMemo(id, newContent)  {
     }
     saveMemos([...memos, targetMemo])
 }
+
 function deleteMemo (id, element) {
-    let memos = getMemos().filter(memo => memo.id ! =id );
+    let memos = getMemos().filter(memo => memo.id != id );
 
     saveMemos(memos)
     memosContainer.removeChild(element);
@@ -80,6 +80,6 @@ addMemoButton.addEventListener("click", () => addMemo());
 
 getMemos().forEach((memo) => {
     let memoElement = createMemoElement(memo.id, memo.content);
-    memosContainer = createMemoElement(memoElement, addMemoButton)
+    memosContainer.insertBefore(memoElement, addMemoButton);
     
 });
